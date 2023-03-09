@@ -1,0 +1,620 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="CrystalReportDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>0eba997b-eb3d-4a2b-a166-81ae183d4c04</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="CrystalReportDataSet3">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>337865f0-4ec3-438e-a550-bb004c716497</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="dsPersons">
+      <Query>
+        <DataSourceName>CrystalReportDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Id">
+          <DataField>Id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Firstname">
+          <DataField>Firstname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Surname">
+          <DataField>Surname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Age">
+          <DataField>Age</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Data">
+          <DataField>Data</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>CrystalReportDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\ett19042\Projects\RDLC_WebAPI_Example2\RDLC_WebAPI_Example\RDLC_WebAPI_Example\CrystalReportDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>Person</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>PersonTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsBarcode">
+      <Query>
+        <DataSourceName>CrystalReportDataSet3</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Id">
+          <DataField>Id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Data1">
+          <DataField>Data1</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="Data2">
+          <DataField>Data2</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="Data3">
+          <DataField>Data3</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="Data4">
+          <DataField>Data4</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>CrystalReportDataSet3</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\ett19042\Projects\RDLC_WebAPI_Example2\RDLC_WebAPI_Example\RDLC_WebAPI_Example\CrystalReportDataSet3.xsd</rd:SchemaPath>
+        <rd:TableName>Image</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>ImageTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="Tablix1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>2.45181cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.45181cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.45181cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.59292cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.59972cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Id</Value>
+                                  <Style>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>DarkOliveGreen</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox4">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Firstname</Value>
+                                  <Style>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>DarkOliveGreen</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox6">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Surname</Value>
+                                  <Style>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>DarkOliveGreen</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox8">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Age</Value>
+                                  <Style>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>DarkOliveGreen</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.59972cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Id">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Id.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Firstname">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Firstname.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Surname">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Surname.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Age">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Age.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Details" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>dsPersons</DataSetName>
+            <Top>1.13453cm</Top>
+            <Left>2.90314cm</Left>
+            <Height>1.19944cm</Height>
+            <Width>9.94835cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Line Name="Line1">
+            <Top>1.32292cm</Top>
+            <Left>14.48594cm</Left>
+            <Height>6.37646cm</Height>
+            <Width>0cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line2">
+            <Top>1.33615cm</Top>
+            <Left>1.29646cm</Left>
+            <Height>7.97719cm</Height>
+            <Width>0cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Image Name="Image1">
+            <Source>Database</Source>
+            <Value>=FIRST(Fields!Data1.Value, "dsBarcode")</Value>
+            <MIMEType>image/jpeg</MIMEType>
+            <Sizing>FitProportional</Sizing>
+            <Top>3.53314cm</Top>
+            <Left>2.9337cm</Left>
+            <Height>1.5cm</Height>
+            <Width>1.5cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
+          <Image Name="Image2">
+            <Source>Database</Source>
+            <Value>=FIRST(Fields!Data2.Value, "dsBarcode")</Value>
+            <MIMEType>image/jpeg</MIMEType>
+            <Sizing>FitProportional</Sizing>
+            <Top>3.53314cm</Top>
+            <Left>6.30676cm</Left>
+            <Height>1.5cm</Height>
+            <Width>1.5cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
+          <Image Name="Image3">
+            <Source>Database</Source>
+            <Value>=FIRST(Fields!Data3.Value, "dsBarcode")</Value>
+            <MIMEType>image/jpeg</MIMEType>
+            <Sizing>FitProportional</Sizing>
+            <Top>3.53314cm</Top>
+            <Left>6.30676cm</Left>
+            <Height>2.27611cm</Height>
+            <Width>2.39958cm</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
+          <Image Name="Image4">
+            <Source>Database</Source>
+            <Value>=FIRST(Fields!Data4.Value, "dsBarcode")</Value>
+            <MIMEType>image/jpeg</MIMEType>
+            <Sizing>FitProportional</Sizing>
+            <Top>15cm</Top>
+            <Left>10cm</Left>
+            <Height>55cm</Height>
+            <Width>20cm</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
+        </ReportItems>
+        <Height>70cm</Height>
+        <Style />
+      </Body>
+      <Width>30cm</Width>
+      <Page>
+        <PageHeader>
+          <Height>4.04812cm</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="Textbox1">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>User Info Report</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.4078cm</Top>
+              <Left>1.38107cm</Left>
+              <Height>0.56472cm</Height>
+              <Width>4.63431cm</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Line Name="Line3">
+              <Top>1.07156cm</Top>
+              <Left>1.38906cm</Left>
+              <Height>0cm</Height>
+              <Width>13.14979cm</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>Solid</Style>
+                </Border>
+              </Style>
+            </Line>
+            <Textbox Name="Textbox3">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=FIRST(Fields!Firstname.Value, "dsPersons")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.29328cm</Top>
+              <Left>11cm</Left>
+              <Height>1.6cm</Height>
+              <Width>2.5cm</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+              <Width>2pt</Width>
+            </Border>
+          </Style>
+        </PageHeader>
+        <PageHeight>29.7cm</PageHeight>
+        <PageWidth>21cm</PageWidth>
+        <LeftMargin>2cm</LeftMargin>
+        <RightMargin>2cm</RightMargin>
+        <TopMargin>2cm</TopMargin>
+        <BottomMargin>2cm</BottomMargin>
+        <ColumnSpacing>0.13cm</ColumnSpacing>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <EmbeddedImages>
+    <EmbeddedImage Name="kemibarcode">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>40b84ffa-55ed-4832-a062-cf29410b0f75</rd:ReportID>
+</Report>
